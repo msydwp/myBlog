@@ -1,0 +1,52 @@
+server:
+  port: 9092
+#  servlet:
+#    context-path: /myBlog
+mybatis:
+  type-aliases-package: com.entity
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    auto-mapping-behavior: full
+    use-generated-keys: true
+spring:
+  application:
+    name: blog
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/personalBlog
+    username: root
+    password: root
+  jackson:
+    date-format: yyyy-MM-dd
+    time-zone: GMT+8
+  redis:
+    #数据库索引
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password: redisblog996
+    jedis:
+      pool:
+        #最大连接数
+        max-active: 8
+        #最大阻塞等待时间(负数表示没限制)
+        max-wait: -1
+        #最大空闲
+        max-idle: 8
+        #最小空闲
+        min-idle: 0
+        #连接超时时间
+    timeout: 10000
+
+# 分页插件
+page helper:
+  reasonable: true
+  page-size-zero: true
+
+figps:
+  appid: "上海心源"
+  signature: "kaeeRHg5SgX!1oCXfR0q$4qsKxpS9etW"
+  url: "https://open.figps.com/api/auth"
+
+#汉字爬取网页
+charactsUrl: "https://hanyu.baidu.com/zici/s?from=aladdin"

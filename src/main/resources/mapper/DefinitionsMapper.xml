@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.uy.mapper.DefinitionsMapper">
+
+    <resultMap id="BaseResultMap" type="com.uy.pojo.Definitions">
+            <id property="def_id" column="def_id" jdbcType="INTEGER"/>
+            <result property="char_id" column="char_id" jdbcType="INTEGER"/>
+            <result property="definition" column="definition" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        def_id,char_id,definition
+    </sql>
+</mapper>

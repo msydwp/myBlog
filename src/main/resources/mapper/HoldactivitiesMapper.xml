@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.uy.mapper.HoldactivitiesMapper">
+
+    <resultMap id="BaseResultMap" type="com.uy.pojo.Holdactivities">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="sponsor" column="sponsor" jdbcType="VARCHAR"/>
+            <result property="holdTitle" column="holdTitle" jdbcType="TIMESTAMP"/>
+            <result property="holdTime" column="holdTime" jdbcType="TIMESTAMP"/>
+            <result property="guest" column="guest" jdbcType="VARCHAR"/>
+            <result property="operationTime" column="operationTime" jdbcType="TIMESTAMP"/>
+            <result property="cashGift" column="cashGift" jdbcType="BIGINT"/>
+            <result property="holdType" column="holdType" jdbcType="INTEGER"/>
+            <result property="status" column="status" jdbcType="INTEGER"/>
+            <result property="holdAddress" column="holdAddress" jdbcType="VARCHAR"/>
+            <result property="sponsorName" column="sponsorName" jdbcType="VARCHAR"/>
+            <result property="guestName" column="guestName" jdbcType="VARCHAR"/>
+            <result property="holdDescribe" column="holdDescribe" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,sponsor,holdTime,holdTitle
+        guest,operationTime,cashGift,
+        holdType,status,holdAddress,
+        sponsorName,guestName,holdDescribe
+    </sql>
+    <select id="queryHoldData" resultType="com.uy.pojo.Holdactivities"></select>
+
+
+</mapper>

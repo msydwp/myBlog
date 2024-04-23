@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.uy.mapper.CharactersMapper">
+
+    <resultMap id="BaseResultMap" type="com.uy.pojo.Characters">
+            <id property="char_id" column="char_id" jdbcType="INTEGER"/>
+            <result property="char_name" column="char_name" jdbcType="VARCHAR"/>
+            <result property="pinyin" column="pinyin" jdbcType="VARCHAR"/>
+            <result property="stroke_count" column="stroke_count" jdbcType="INTEGER"/>
+            <result property="radicals" column="radicals" jdbcType="VARCHAR"/>
+        <result property="dataGif" column="data_gif" jdbcType="VARCHAR"/>
+
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        char_id,char_name,pinyin,
+        stroke_count,radicals,dataGif
+    </sql>
+</mapper>
